@@ -1,4 +1,4 @@
-package –Ú¡–ªØ;
+package xuliehua;
 
 import java.io.File;
 import java.io.FileInputStream;

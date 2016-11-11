@@ -1,4 +1,4 @@
-package 序列化;
+package xuliehua;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class Test2 {
+public class Test {
 	static File file=new File("D:/aaa");
 	
 	
@@ -17,7 +17,7 @@ public class Test2 {
 			file=new File("D:/aaa");
 		}
 		
-		File file2=new File(file,"person2.txt");
+		File file2=new File(file,"person.txt");
 		//		文件输出流
 		FileOutputStream fos=new FileOutputStream(file2);
 		
@@ -25,7 +25,7 @@ public class Test2 {
 		ObjectOutputStream   oos=new ObjectOutputStream(fos);
 		
 //		创建需要序列化的对象
-		Person2 p1=new Person2();
+		Person p1=new Person();
 		p1.setAddress("zhonguo");
 		p1.setAge(32);
 		p1.setPname("chengxiangfeng");
@@ -42,13 +42,13 @@ public class Test2 {
 	
 	public static void  run2() throws IOException, Exception{
 //		读取文件
-		File file1=new File("D:/aaa/person2.txt");
+		File file1=new File("D:/aaa/person.txt");
 //		文件输入流
 		FileInputStream  fis=new FileInputStream(file1);
 //		对象输入流
 		ObjectInputStream  ois=new ObjectInputStream(fis);
 //		获取对象
-		Person2 p1=(Person2) ois.readObject();
+		Person p1=(Person) ois.readObject();
 		System.out.println(p1.getAddress()+"{  }"+p1.getAge()+"[   ]"+p1.getPname()+"---");
 	    p1.run();
 	}
