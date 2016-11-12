@@ -2,7 +2,7 @@ package xuliehua;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public class Person extends Father implements Serializable {
 //	序列化的版本控制
 	private static final long serserialVersionUID = -682707297088912201L; 
 	
@@ -33,8 +33,9 @@ public class Person implements Serializable {
 	}
 	
 	public void run(){
+		int a=10;
 		
-		System.out.println("我是person类=====");
+		System.out.println("我是person类====="+a);
 	}
 
 }

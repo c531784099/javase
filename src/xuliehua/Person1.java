@@ -38,14 +38,19 @@ public class Person1 implements Serializable {
 	}
 //	序列化时会执行该方法、通过该方法序列化指定的数据。
 	 private void writeObject(ObjectOutputStream out) throws IOException{  
-	        HashMap<String, String> map = new HashMap<String, String>();  
-	        map.put("ll", "小明");  
-	        out.writeObject(map);  
+//	        HashMap<String, String> map = new HashMap<String, String>();  
+//	        map.put("ll", "小明"); 
+//	        map.put("gg", "wang");
+	        out.writeObject(getAddress());
+	        out.writeObject(getPname());
+//	        out.writeObject(map);  
 	    }  
 //	 反向序列化时会调用该方法。
 	 private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{  
-	        HashMap<String, String> map = (HashMap<String, String>) in.readObject();  
-	        System.out.println(map.get("ll"));  
+//	        HashMap<String, String> map = (HashMap<String, String>) in.readObject();  
+//	        System.out.println(map.get("ll")+"   "+map.get("gg"));  
+	        System.out.println(in.readObject());
+	        System.out.println(in.readObject());
 	       
 	    }
 	public Person1() {

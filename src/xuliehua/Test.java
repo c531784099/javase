@@ -49,8 +49,10 @@ public class Test {
 		ObjectInputStream  ois=new ObjectInputStream(fis);
 //		获取对象
 		Person p1=(Person) ois.readObject();
-		System.out.println(p1.getAddress()+"{  }"+p1.getAge()+"[   ]"+p1.getPname()+"---");
+//		调用对象的  方法
+		System.out.println(p1.getAddress()+"{  }"+p1.getAge()+"[   ]"+p1.getPname()+"---"+p1.getName()+p1.getAge1());
 	    p1.run();
+	    System.out.println(p1.getClass());
 	}
 	
 	public static void main(String[] args) throws Exception {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheng cat="it">
+	<wang id="1">
+		<address>shijiazhai</address>
+		<age>45</age>
+	</wang>
+	<shi id="2">
+		<address>caofusi</address>
+		<age>50</age>
+		<age>56</age>
+
+	</shi>
+	<li id="3">
+		<address id="3">
+			<address>zibo</address>
+			<age>55</age>
+
+		</address>
+
+	</li>
+
+
+</cheng>

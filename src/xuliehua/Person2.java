@@ -44,7 +44,7 @@ public class Person2 implements Externalizable {
 public void writeExternal(ObjectOutput out) throws IOException {
 	out.writeObject(getAddress());
 	out.writeObject(getPname());
-	System.out.println(getAge());
+//	System.out.println(getAge());
 	
 }
 //这里通过构造方法对忽略的序列化字段  进行赋值 
@@ -54,11 +54,12 @@ public Person2() {
 }
 @Override
 public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+//	按照序列化的顺序 进行反序列化
 	setAddress((String)in.readObject());
 	setPname((String)in.readObject());
 //获取不到
-	System.out.println(getAge());
-	
+//	System.out.println(getAge());
+//	
 }   
 
 }

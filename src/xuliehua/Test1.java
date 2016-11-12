@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.HashMap;
 
 public class Test1 {
 	static File file=new File("D:/aaa");
@@ -49,8 +50,12 @@ public class Test1 {
 		ObjectInputStream  ois=new ObjectInputStream(fis);
 //		获取对象
 		Person1 p1=(Person1) ois.readObject();
-		System.out.println(p1.getAddress()+"{  }"+p1.getAge()+"[   ]"+p1.getPname()+"---");
+		
+		System.out.println(p1.toString()+p1.getAddress()+"{  }"+p1.getAge()+"[   ]"+p1.getPname()+"---");
 	    p1.run();
+	    
+	   
+	    
 	}
 	
 	public static void main(String[] args) throws Exception {
